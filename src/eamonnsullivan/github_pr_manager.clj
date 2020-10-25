@@ -9,3 +9,7 @@
   (json/write-str
    (pr/get-pull-request-info access-token
                              pull-request-url)))
+
+(defn add-comment
+  [url comment]
+  (json/write-str (pr/add-pull-request-comment access-token url comment)))
