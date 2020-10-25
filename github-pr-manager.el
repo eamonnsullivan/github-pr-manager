@@ -7,7 +7,7 @@
                :doc "Get information on a Github pull request.")
 
 (defun get-hashmap (response)
-    "Get a hashmap from a JSON response"
+  "Get a hashmap from a JSON response"
   (when response
     (let* ((json-object-type 'hash-table)
            (json-array-type 'list)
@@ -15,7 +15,6 @@
            (hashmap (json-read-from-string response)))
       hashmap)))
 
-;;;###autoload
 (defun gprm-get-info (url)
   (interactive "r")
   (let ((response (gprm-pull-request-info url))
