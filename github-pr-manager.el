@@ -6,9 +6,8 @@
                :namespace eamonnsullivan.github-pr-manager
                :doc "Get information on a Github pull request.")
 
-(defun get-hashmap
+(defun get-hashmap (response)
     "Get a hashmap from a JSON response"
-  (response)
   (when response
     (let* ((json-object-type 'hash-table)
            (json-array-type 'list)
