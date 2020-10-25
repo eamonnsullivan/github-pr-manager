@@ -18,7 +18,7 @@
 ;;;###autoload
 (defun gprm-get-info (url)
   (interactive "r")
-  (let ((response (gpr-emacs-pull-request-info url))
+  (let ((response (gprm-pull-request-info url))
         (nrepl-sync-request-timeout 30))
     (get-hashmap response)))
 
