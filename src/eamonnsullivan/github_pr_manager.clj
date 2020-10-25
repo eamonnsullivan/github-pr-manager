@@ -1,5 +1,5 @@
-(ns eamonnsullivan.gpr-emacs
-  (:require [eamonnsullivan.github-pr-lib :as pr]
+(ns eamonnsullivan.github-pr-manager
+  (:require [eamonnsullivan.github-api-lib.pull-requests :as pr]
             [clojure.data.json :as json]))
 
 (def access-token (System/getenv "GITHUB_ACCESS_TOKEN"))

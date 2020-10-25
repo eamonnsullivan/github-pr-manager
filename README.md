@@ -1,10 +1,10 @@
-# gpr-emacs
+# github-pr-manager
 
-FIXME: my new application.
+Add ability to create and manager pull requests on Github inside of emacs.
 
 ## Installation
 
-Download from https://github.com/eamonnsullivan/gpr-emacs
+Download from https://github.com/eamonnsullivan/github-pr-manager
 
 ## Usage
 
@@ -12,7 +12,7 @@ FIXME: explanation
 
 Run the project directly:
 
-    $ clojure -m eamonnsullivan.gpr-emacs
+    $ clojure -m eamonnsullivan.github-pr-manager
 
 Run the project's tests (they'll fail until you edit them):
 
@@ -24,7 +24,7 @@ Build an uberjar:
 
 Run that uberjar:
 
-    $ java -jar gpr-emacs.jar
+    $ java -jar github-pr-manager.jar
 
 ## Options
 

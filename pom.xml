@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>eamonnsullivan</groupId>
-  <artifactId>gpr-emacs</artifactId>
+  <artifactId>github-pr-manager</artifactId>
   <version>0.1.0-SNAPSHOT</version>
-  <name>eamonnsullivan/gpr-emacs</name>
-  <description>FIXME: my new application.</description>
-  <url>https://github.com/eamonnsullivan/gpr-emacs</url>
+  <name>eamonnsullivan/github-pr-manager</name>
+  <description>Create and modify github pull requests inside of Emacs.</description>
+  <url>https://github.com/eamonnsullivan/github-pr-manager</url>
   <licenses>
     <license>
       <name>Eclipse Public License</name>
@@ -19,16 +19,31 @@
     </developer>
   </developers>
   <scm>
-    <url>https://github.com/eamonnsullivan/gpr-emacs</url>
-    <connection>scm:git:git://github.com/eamonnsullivan/gpr-emacs.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/eamonnsullivan/gpr-emacs.git</developerConnection>
+    <url>https://github.com/eamonnsullivan/github-pr-manager</url>
+    <connection>scm:git:git://github.com/eamonnsullivan/github-pr-manager.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/eamonnsullivan/github-pr-manager.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   <dependencies>
     <dependency>
       <groupId>org.clojure</groupId>
+      <artifactId>data.json</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
       <version>1.10.1</version>
+    </dependency>
+    <dependency>
+      <groupId>eamonnsullivan</groupId>
+      <artifactId>github-api-lib</artifactId>
+      <version>0.1.15</version>
+    </dependency>
+    <dependency>
+      <groupId>clomacs</groupId>
+      <artifactId>clomacs</artifactId>
+      <version>0.0.4-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <build>
@@ -38,6 +53,10 @@
     <repository>
       <id>clojars</id>
       <url>https://repo.clojars.org/</url>
+    </repository>
+    <repository>
+      <id>internal</id>
+      <url>https://dev.bbc.co.uk/artifactory/repo</url>
     </repository>
     <repository>
       <id>sonatype</id>
