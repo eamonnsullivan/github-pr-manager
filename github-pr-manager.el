@@ -24,15 +24,13 @@
 (defun gprm-get-info (url)
   "Get information, the form of a hashmap, for a particular pull request."
   (interactive "r")
-  (let ((response (gprm-pull-request-info url))
-        (nrepl-sync-request-timeout 30))
+  (let ((response (gprm-pull-request-info url)))
     (get-hashmap response)))
 
 (defun gprm-add-comment (url comment)
   "Add a comment to a pull request."
   (interactive "p")
-  (let ((response (gprm-pull-request-comment url comment))
-        (nrepl-sync-request-timeout 30))
+  (let ((response (gprm-add-pull-request-comment url comment)))
     (get-hashmap response)))
 
 (provide 'github-pr-manager)
