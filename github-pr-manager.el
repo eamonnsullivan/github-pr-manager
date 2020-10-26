@@ -33,6 +33,6 @@
   (let ((response (gprm-add-pull-request-comment url comment)))
     (get-hashmap response)))
 
-(gprm-get-info "eamonnsullivan/github-pr-manager/pull/1\\\\\\\\xs")
+; (gprm-get-info "eamonnsullivan/github-pr-manager/pull/1")
 
 (provide 'github-pr-manager)
