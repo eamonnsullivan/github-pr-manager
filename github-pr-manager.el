@@ -15,14 +15,14 @@
 (defun get-hashmap (response)
   "Get a hashmap from a JSON response"
   (when response
-    (let* ((json-object-type 'hash-table)
+    (let* ((json-object-type 'plist)
            (json-array-type 'list)
            (json-key-type 'string)
            (hashmap (json-read-from-string response)))
       hashmap)))
 
 (defun gprm-get-info (url)
-  "Get information, the form of a hashmap, for a particular pull request."
+  "Get information, in the form of a plist, for a particular pull request."
   (interactive "r")
   (let ((response (gprm-pull-request-info url)))
     (get-hashmap response)))
